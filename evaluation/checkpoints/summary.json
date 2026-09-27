@@ -1,0 +1,66 @@
+{
+  "benchmark": "numina_test_checkpoints",
+  "n_examples": 99,
+  "base_model_id": "Qwen/Qwen2-0.5B-Instruct",
+  "checkpoint_root": "checkpoints/Qwen2-0.5B-GRPO",
+  "max_new_tokens": 256,
+  "system_prompt": "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, i.e., <think> reasoning process here </think><answer> answer here </answer>",
+  "checkpoints": [
+    {
+      "label": "base",
+      "step": 0,
+      "adapter_dir": null,
+      "math_accuracy": 0.06060606060606061,
+      "format_compliance": 0.010101010101010102,
+      "strict_success": 0.0,
+      "parse_failure_rate": 0.5454545454545454,
+      "avg_generated_tokens": 71.48484848484848,
+      "median_generated_tokens": 48.0,
+      "fraction_clipped_at_max": 0.0707070707070707,
+      "runtime_sec": 67.8835738159978,
+      "examples_per_sec": 1.4583793167452408
+    },
+    {
+      "label": "checkpoint-200",
+      "step": 200,
+      "adapter_dir": "checkpoints/Qwen2-0.5B-GRPO/checkpoint-200",
+      "math_accuracy": 0.050505050505050504,
+      "format_compliance": 0.16161616161616163,
+      "strict_success": 0.0,
+      "parse_failure_rate": 0.5454545454545454,
+      "avg_generated_tokens": 46.474747474747474,
+      "median_generated_tokens": 40.0,
+      "fraction_clipped_at_max": 0.0,
+      "runtime_sec": 16.47925935999956,
+      "examples_per_sec": 6.007551543263206
+    },
+    {
+      "label": "checkpoint-500",
+      "step": 500,
+      "adapter_dir": "checkpoints/Qwen2-0.5B-GRPO/checkpoint-500",
+      "math_accuracy": 0.06060606060606061,
+      "format_compliance": 0.16161616161616163,
+      "strict_success": 0.010101010101010102,
+      "parse_failure_rate": 0.5656565656565656,
+      "avg_generated_tokens": 46.07070707070707,
+      "median_generated_tokens": 40.0,
+      "fraction_clipped_at_max": 0.0,
+      "runtime_sec": 14.853949500000454,
+      "examples_per_sec": 6.664894074131394
+    },
+    {
+      "label": "checkpoint-905",
+      "step": 905,
+      "adapter_dir": "checkpoints/Qwen2-0.5B-GRPO/checkpoint-905",
+      "math_accuracy": 0.06060606060606061,
+      "format_compliance": 0.16161616161616163,
+      "strict_success": 0.010101010101010102,
+      "parse_failure_rate": 0.5555555555555556,
+      "avg_generated_tokens": 46.111111111111114,
+      "median_generated_tokens": 40.0,
+      "fraction_clipped_at_max": 0.0,
+      "runtime_sec": 8.647859218006488,
+      "examples_per_sec": 11.447919942297762
+    }
+  ]
+}

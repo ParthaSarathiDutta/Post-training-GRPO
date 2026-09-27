@@ -1,0 +1,61 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets / env
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+.ssh/
+
+# Model weights & training artifacts (repo root only; not evaluation/checkpoints/)
+/checkpoints/
+*.safetensors
+*.pt
+*.pth
+optimizer.pt
+**/optimizer.pt
+**/training_args.bin
+**/adapter_model.*
+
+# Logs & Slurm
+logs/
+*.out
+*.err
+evaluation/**/eval_run.log
+evaluation/extended_eval_run.log
+evaluation/eval_run.log
+
+# HF / caches
+.cache/
+.huggingface/
+hf_cache/
+
+# TensorBoard / runs
+runs/
+**/runs/
+events.out.tfevents.*
+
+# Large evaluation outputs
+evaluation/**/per_example.jsonl
+evaluation/gsm8k/
+evaluation/math500/
+evaluation/summary.json
+
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
+*.swp
+
+# Keep lightweight summaries and final plots (not ignored):
+# evaluation/compute_usage_summary.*
+# evaluation/plots/final_*.png
+# evaluation/checkpoints/learning_curve.csv
+# evaluation/checkpoints/summary.json

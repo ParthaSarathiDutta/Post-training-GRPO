@@ -1,0 +1,17 @@
+---
+description: GPU/Slurm efficiency before GRPO training or evaluation on Perlmutter
+alwaysApply: true
+---
+
+# Compute efficiency (GRPO project)
+
+Before submitting **salloc**, **sbatch**, **srun**, tmux GPU launchers, **train.py**, or **evaluate\*.py** for this repo:
+
+1. Read and follow the project skill **compute-efficiency** (`.cursor/skills/compute-efficiency/SKILL.md`).
+2. Confirm **GPUs reserved = GPUs the Python job will actually use** (default: **1 GPU / 1 node** for single-process train/eval).
+3. Prefer **smoke → mini → full** training and **small subset → full benchmark** evaluation.
+4. Separate **active GPU-hours** vs **allocated GPU-hours** when reporting compute.
+
+Case study: `evaluation/compute_usage_summary.md` (full run ~1.21 active vs ~9.91 allocated GPU-hours on job 58848004).
+
+If the user supplied an exact Slurm command, do not change it without permission—recommend efficiency separately.

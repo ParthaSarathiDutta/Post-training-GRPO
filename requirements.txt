@@ -1,0 +1,7 @@
+# Install into project venv with --system-site-packages (see scripts/setup_env.sh).
+# Do not reinstall torch/transformers; use NERSC module pytorch/2.13.0.
+trl>=0.14.0
+peft>=0.14.0
+math_verify>=0.3.3
+tensorboard>=2.14.0
+sentencepiece>=0.2.0
